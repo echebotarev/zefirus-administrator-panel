@@ -2,8 +2,9 @@
   <div class="wrapper">
     <div class="content-page">
       <div class="content">
-        <nav-bar />
+        <NavBar />
         <Nuxt />
+        <Footer />
       </div>
     </div>
   </div>
@@ -11,9 +12,11 @@
 
 <script>
 import NavBar from '~/components/NavBar'
+import Footer from '~/components/Footer'
 export default {
   components: {
     NavBar,
+    Footer,
   },
   head() {
     return {
