@@ -5,8 +5,6 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-  // eslint-disable-next-line
-  name: '_id',
   async fetch({ store, error, params }) {
     try {
       await store.dispatch('profiles/fetchProfile', params.id)
