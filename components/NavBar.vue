@@ -31,11 +31,7 @@
             aria-expanded="false"
           >
             <span class="account-user-avatar">
-              <img
-                src="assets/images/users/avatar-1.jpg"
-                alt="user-image"
-                class="rounded-circle"
-              />
+              <img :src="avatarImg" alt="user-image" class="rounded-circle" />
             </span>
             <span>
               <span class="account-user-name">Dominic Keller</span>
@@ -88,8 +84,18 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 export default {
   name: 'NavBar',
+  computed: mapState({
+    user: (state) => state.user.user,
+    avatarImg: (state) => `images/users/${state.user.user.image}`,
+  }),
+  created() {
+    this.fetchUser()
+  },
+  methods: mapActions('user', ['fetchUser']),
 }
 </script>
 
