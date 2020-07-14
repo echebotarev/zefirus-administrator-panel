@@ -35,9 +35,9 @@
             <div class="form-group">
               <label for="emailaddress">Email address</label>
               <input
+                id="emailaddress"
                 class="form-control"
                 type="email"
-                id="emailaddress"
                 required=""
                 placeholder="Enter your email"
               />
@@ -48,19 +48,19 @@
               >
               <label for="password">Password</label>
               <input
+                id="password"
                 class="form-control"
                 type="password"
                 required=""
-                id="password"
                 placeholder="Enter your password"
               />
             </div>
             <div class="form-group mb-3">
               <div class="custom-control custom-checkbox">
                 <input
+                  id="checkbox-signin"
                   type="checkbox"
                   class="custom-control-input"
-                  id="checkbox-signin"
                 />
                 <label class="custom-control-label" for="checkbox-signin"
                   >Remember me</label

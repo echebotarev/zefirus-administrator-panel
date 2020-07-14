@@ -1,11 +1,20 @@
 <template>
-  <div>
-    <Nuxt />
+  <div class="wrapper">
+    <div class="content-page">
+      <div class="content">
+        <nav-bar />
+        <Nuxt />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import NavBar from '~/components/NavBar'
 export default {
+  components: {
+    NavBar,
+  },
   head() {
     return {
       titleTemplate: '%s - Zefirus',
@@ -16,6 +25,10 @@ export default {
           content: 'Zefirus',
         },
       ],
+      bodyAttrs: {
+        'data-layout': 'topnav',
+        hid: 'data-layout',
+      },
     }
   },
 }
