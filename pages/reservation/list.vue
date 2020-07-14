@@ -24,15 +24,25 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in reservations" :key="item.id" role="row">
+                  <tr
+                    v-for="reservation in reservations"
+                    :key="reservation.id"
+                    role="row"
+                  >
                     <td>
-                      {{ item.guestProfile.person.firstName }}
-                      {{ item.guestProfile.person.lastName }}
+                      {{ reservation.guestProfile.person.lastName }}
+                      {{ reservation.guestProfile.person.firstName }}
+                      (<nuxt-link
+                        :to="
+                          '/guest-profile/view/' + reservation.guestProfile.id
+                        "
+                        >view</nuxt-link
+                      >)
                     </td>
-                    <td>{{ item.arrivalDate }}</td>
-                    <td>{{ item.departureDate }}</td>
-                    <td>{{ item.status }}</td>
-                    <td>{{ item.roomType }}</td>
+                    <td>{{ reservation.arrivalDate }}</td>
+                    <td>{{ reservation.departureDate }}</td>
+                    <td>{{ reservation.status }}</td>
+                    <td>{{ reservation.roomType }}</td>
                   </tr>
                 </tbody>
               </table>
