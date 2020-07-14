@@ -25,6 +25,7 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+    script: [{ src: 'js/vendor.min.js' }, { src: 'js/app.min.js' }],
   },
   /*
    ** Global CSS
