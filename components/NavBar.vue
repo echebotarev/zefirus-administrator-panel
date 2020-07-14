@@ -72,7 +72,7 @@
     <div class="topnav shadow-sm">
       <div class="container-fluid">
         <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
-          <div class="collapse navbar-collapse" id="topnav-menu-content">
+          <div id="topnav-menu-content" class="collapse navbar-collapse">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <nuxt-link
