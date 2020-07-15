@@ -134,7 +134,7 @@
                 id="person-save"
                 type="button"
                 class="btn btn-primary"
-                @click="sendData"
+                @click.stop.prevent="sendData"
               >
                 Save
               </button>
@@ -290,7 +290,9 @@ export default {
       })
       .change()
   },
-  methods: mapActions('profiles', ['sendData']),
+  methods: {
+    ...mapActions('profiles', ['sendData']),
+  },
 }
 </script>
 

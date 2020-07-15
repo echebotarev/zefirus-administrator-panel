@@ -13,4 +13,7 @@ export default {
   getData(uri = '/reservation/list') {
     return apiClient.get(uri)
   },
+  sendData(uri, data) {
+    return apiClient.post(uri, data)
+  },
 }
