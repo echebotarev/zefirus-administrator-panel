@@ -24,4 +24,25 @@ export const actions = {
       commit('SET_PROFILE', response.data)
     })
   },
+
+  sendData({ state }) {
+    // eslint-disable-next-line no-undef
+    const dataArray = $('form.person').serializeArray()
+    const postData = {}
+    // eslint-disable-next-line no-undef
+    $(dataArray).each(function (i, field) {
+      postData[field.name] = field.value
+    })
+
+    // eslint-disable-next-line no-undef
+    $.ajax({
+      type: 'POST',
+      url: `/api/guest-profile/${state.profile.id}/update`,
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify({ person: postData }),
+    }).done(function (response) {
+      console.log(response)
+    })
+  },
 }

@@ -130,7 +130,12 @@
                   :value="profile.person.email"
                 />
               </div>
-              <button id="person-save" type="button" class="btn btn-primary">
+              <button
+                id="person-save"
+                type="button"
+                class="btn btn-primary"
+                @click="sendData"
+              >
                 Save
               </button>
             </form>
@@ -235,7 +240,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import DocumentForm from '~/components/DocumentForm'
 export default {
   component: [DocumentForm],
@@ -257,6 +262,35 @@ export default {
       { key: 'F', name: 'Female' },
     ],
   }),
+  mounted() {
+    // eslint-disable-next-line no-undef
+    $('.date').daterangepicker({
+      singleDatePicker: true,
+      minYear: 1901,
+      // eslint-disable-next-line no-undef
+      maxDate: moment(),
+      locale: {
+        format: 'DD.MM.YYYY',
+        firstDay: 1,
+      },
+    })
+
+    // eslint-disable-next-line no-undef
+    $('.select2').select2({
+      minimumResultsForSearch: Infinity,
+    })
+
+    // eslint-disable-next-line no-undef
+    $('#documentType')
+      .on('change', function () {
+        // eslint-disable-next-line no-undef
+        $('.tab-pane').removeClass('show active')
+        // eslint-disable-next-line no-undef
+        $('#' + this.value).addClass('show active')
+      })
+      .change()
+  },
+  methods: mapActions('profiles', ['sendData']),
 }
 </script>
 
