@@ -5,18 +5,10 @@
         <!-- LOGO -->
         <nuxt-link to="/" class="topnav-logo">
           <span class="topnav-logo-lg">
-            <img
-              src="~/assets/images/logo_zefirus_white_h36.png"
-              alt=""
-              height="16"
-            />
+            <img src="~/assets/images/logo_zefirus_white_h36.png" alt="" />
           </span>
           <span class="topnav-logo-sm">
-            <img
-              src="~/assets/images/logo_zefirus_white_h36.png"
-              alt=""
-              height="16"
-            />
+            <img src="~/assets/images/logo_zefirus_white_h36.png" alt="" />
           </span>
         </nuxt-link>
 
@@ -32,11 +24,15 @@
               aria-expanded="false"
             >
               <span class="account-user-avatar">
-                <img :src="avatarImg" alt="user-image" class="rounded-circle" />
+                <img
+                  src="~/assets/images/users/avatar-9.jpg"
+                  alt="user-image"
+                  class="rounded-circle"
+                />
               </span>
               <span>
-                <span class="account-user-name">Dominic Keller</span>
-                <span class="account-position">Founder</span>
+                <span class="account-user-name">Hotezita Zefirus</span>
+                <span class="account-position">Admin</span>
               </span>
             </a>
             <div

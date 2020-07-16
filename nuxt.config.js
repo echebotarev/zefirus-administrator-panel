@@ -33,7 +33,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/icons.min.css', '~/assets/css/app-creative.min.css'],
+  css: [
+    '~/assets/css/icons.min.css',
+    '~/assets/css/app-creative.min.css',
+    '~/assets/css/main.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins

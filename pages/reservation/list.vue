@@ -13,7 +13,7 @@
         <div class="card">
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table mb-0 table-striped tbody">
+              <table class="table table-hover mb-0">
                 <thead>
                   <tr>
                     <th>Guest Name</th>
