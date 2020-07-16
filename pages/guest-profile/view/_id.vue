@@ -75,7 +75,11 @@
                   type="text"
                   name="dateOfBirth"
                   class="form-control date"
-                  :value="profile.person.dateOfBirth"
+                  :value="
+                    profile.person.dateOfBirth
+                      ? $moment(profile.person.dateOfBirth).format('DD.MM.YYYY')
+                      : ''
+                  "
                 />
               </div>
               <div class="form-group">
