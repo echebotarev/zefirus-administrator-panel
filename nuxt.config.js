@@ -42,7 +42,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['~/plugins/axios.js'],
+  plugins: [],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -68,6 +68,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  fetchOnServer: false,
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
