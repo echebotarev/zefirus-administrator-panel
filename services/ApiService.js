@@ -21,6 +21,7 @@ export default {
     return apiClient.get(uri)
   },
   sendData(uri, data) {
+    apiClient.defaults.baseURL = 'http://zefirus.hoteza.com:50780/api'
     return apiClient.post(uri, data)
   },
 }
