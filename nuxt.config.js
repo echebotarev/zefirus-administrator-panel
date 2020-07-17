@@ -68,7 +68,6 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
-  fetchOnServer: false,
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration

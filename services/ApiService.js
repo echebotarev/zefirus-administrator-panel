@@ -11,6 +11,13 @@ const apiClient = axios.create({
 
 export default {
   getData(uri = '/reservation/list') {
+    if (process.server) {
+      apiClient.defaults.baseURL = 'http://zefirus.hoteza.local/api'
+    }
+    if (process.client) {
+      apiClient.defaults.baseURL = 'http://zefirus.hoteza.com:50780/api'
+    }
+
     return apiClient.get(uri)
   },
   sendData(uri, data) {
