@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: `http://zefirus.hoteza.com:50780/api`,
+  baseURL: `http://zefirus.hoteza.local/api`,
+  browserBaseUrl: `http://zefirus.hoteza.com:50780/api`,
   withCredentials: false,
   headers: {
     Accept: 'application/json',
