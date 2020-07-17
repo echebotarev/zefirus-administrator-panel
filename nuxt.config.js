@@ -81,5 +81,6 @@ export default {
 
   router: {
     linkActiveClass: 'active',
+    prefetchLinks: false,
   },
 }
